@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, {  useState ,useEffect} from 'react';
 import { TfiHeart ,TfiShoppingCart} from "react-icons/tfi";
 import {BiGitCompare} from 'react-icons/bi'
 import './Product.css';
@@ -8,7 +8,9 @@ const Product = () => {
   const [selectedImg,setSelectedImg]=useState(0)
   const [quantity,setQuantity]=useState(1)
 
- 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const images=[
     "https://images.pexels.com/photos/10026491/pexels-photo-10026491.png?auto-compress&cs-tinysrgb&w=1600&lazy=load",
     "https://images.pexels.com/photos/12179283/pexels-photo-12179283.jpeg?auto-compress&cs-tinysrgb&w=1600&lazy=load"
